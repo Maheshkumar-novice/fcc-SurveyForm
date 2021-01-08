@@ -7,14 +7,151 @@
     <title>Dev Survey</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1 id="title">Developer Survey Form</h1>
-        <p id="description">
-          Let us know what you like Devs by filling this out!
-        </p>
-      </header>
-      <form id="survey-form"></form>
+    <div class="pseudo-body">
+      <div class="container">
+        <header>
+          <h1 id="title">Developer Survey Form</h1>
+
+          <p id="description">
+            Let us know what you like Devs by filling this out!
+          </p>
+        </header>
+
+        <form id="survey-form">
+          <div class="form-div">
+            <label for="name" id="name-label">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-div">
+            <label for="email" id="email-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-div">
+            <label for="number" id="number-label">Age:</label>
+            <input
+              type="number"
+              id="number"
+              min="15"
+              max="99"
+              name="age"
+              placeholder="Enter your age"
+              required
+            />
+          </div>
+
+          <div class="form-div">
+            <p>Favourite Language:</p>
+            <select name="language" id="dropdown" required>
+              <option disabled selected value>Language</option>
+              <option value="python">Python</option>
+              <option value="javascript">Javascript</option>
+              <option value="ruby">Ruby</option>
+              <option value="java">Java</option>
+              <option value="go">Go</option>
+              <option value="php">PHP</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-div" id="radio">
+            <p>Favourite Back-end Framework:</p>
+            <label for="django">
+              <input
+                type="radio"
+                name="backend-framework"
+                value="django"
+                id="django"
+                checked
+              />Django
+            </label>
+            <label for="rails">
+              <input
+                type="radio"
+                name="backend-framework"
+                value="rails"
+                id="rails"
+              />Ruby On Rails
+            </label>
+            <label for="node">
+              <input
+                type="radio"
+                name="backend-framework"
+                value="node"
+                id="node"
+              />Node.js
+            </label>
+            <label for="other">
+              <input
+                type="radio"
+                name="backend-framework"
+                value="other"
+                id="other"
+              />Other
+            </label>
+          </div>
+
+          <div class="form-div" id="check">
+            <p>Favourite Front-end Framework (Check all you like):</p>
+            <label for="react">
+              <input
+                type="checkbox"
+                name="frontend-framework"
+                value="react"
+                id="react"
+                checked
+              />React
+            </label>
+            <label for="angular">
+              <input
+                type="checkbox"
+                name="frontend-framework"
+                value="angular"
+                id="angular"
+              />Angular
+            </label>
+            <label for="vue">
+              <input
+                type="checkbox"
+                name="frontend-framework"
+                value="vue"
+                id="vue"
+              />Vue
+            </label>
+            <label for="Other">
+              <input
+                type="checkbox"
+                name="frontend-framework"
+                value="other"
+                id="Other"
+              />Other
+            </label>
+          </div>
+
+          <div class="form-div" id="text-div">
+            <p>Leave Your Additional Comments and Feedback:</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="form-div" id="submit-div">
+            <button type="submit" id="submit">submit</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
